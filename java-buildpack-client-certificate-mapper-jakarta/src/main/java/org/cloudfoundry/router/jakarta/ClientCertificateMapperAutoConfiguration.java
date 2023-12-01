@@ -32,6 +32,10 @@ import java.security.cert.CertificateException;
 @Configuration
 public class ClientCertificateMapperAutoConfiguration {
 
+
+    public ClientCertificateMapperAutoConfiguration() {
+        System.out.println("Jakarta ClientCertificateMapperAutoConfiguration");
+    }
     @Bean
     ClientCertificateMapper clientCertificateMapper() throws CertificateException {
         return new ClientCertificateMapper();

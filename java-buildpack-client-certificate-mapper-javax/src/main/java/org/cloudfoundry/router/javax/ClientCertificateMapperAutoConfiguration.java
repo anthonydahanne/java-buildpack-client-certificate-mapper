@@ -23,6 +23,7 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered;
+import org.w3c.dom.ls.LSOutput;
 
 import javax.servlet.Filter;
 import java.security.cert.CertificateException;
@@ -31,6 +32,10 @@ import java.security.cert.CertificateException;
 @ConditionalOnCloudPlatform(CloudPlatform.CLOUD_FOUNDRY)
 @Configuration
 public class ClientCertificateMapperAutoConfiguration {
+
+    public ClientCertificateMapperAutoConfiguration() {
+        System.out.println("Javax ClientCertificateMapperAutoConfiguration");
+    }
 
     @Bean
     ClientCertificateMapper clientCertificateMapper() throws CertificateException {

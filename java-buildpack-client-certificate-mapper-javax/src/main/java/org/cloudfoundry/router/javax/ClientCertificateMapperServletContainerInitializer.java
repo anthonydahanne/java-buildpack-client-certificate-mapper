@@ -27,6 +27,10 @@ import java.util.Set;
 
 public final class ClientCertificateMapperServletContainerInitializer implements ServletContainerInitializer {
 
+    public ClientCertificateMapperServletContainerInitializer() {
+        System.out.println("Javax ClientCertificateMapperServletContainerInitializer");
+    }
+
     @Override
     public void onStartup(Set<Class<?>> c, ServletContext ctx) throws ServletException {
         if (ctx == null) {
